@@ -17,7 +17,12 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  background-image: url('https://cdn.pixabay.com/photo/2016/12/15/20/54/flour-dust-1910046_960_720.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
+
 
 main {
   flex: 1;
@@ -109,18 +114,34 @@ main {
   }
 
   .historia-section {
-  margin-top: 190px; /* equivalente a la altura del navbar */
+  margin-top: 200px; /* equivalente a la altura del navbar */
 }
 
-@media (max-width: 768px) {
-  .logo-grande img {
-    height: 80px; /* Ajustá según tu preferencia */
-  }
+.historia-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
+  margin-top: 230px;
+  z-index: 1;
+  overflow: hidden;
+}
 
-  .navbar {
-    height: auto; /* Dejá que crezca con el contenido */
-    padding: 10px 0;
-  }
+.historia-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.158); /* sombra oscura con opacidad */
+  z-index: 0;
+}
+
+.historia-section .row {
+  position: relative;
+  z-index: 2; /* por encima de la capa oscura */
 }
 
 
@@ -158,7 +179,7 @@ main {
         <div class="col">
         <h2 class="mb-4">Nuestra Historia</h2>
         <p>
-            En <strong>Panificadora Bendito Pan</strong>, creemos que el verdadero sabor comienza en casa. Hace ya dos años, decidimos transformar nuestra pasión por la panadería en un proyecto familiar lleno de amor, dedicación y aroma a pan recién horneado. 
+            En <strong>Bendito Pan</strong>, creemos que el verdadero sabor comienza en casa. Hace ya dos años, decidimos transformar nuestra pasión por la panadería en un proyecto familiar lleno de amor, dedicación y aroma a pan recién horneado. 
         </p>
         <p>
             Cada día, en nuestra pequeña panadería, mezclamos tradición con calidad. Nuestros productos son elaborados a mano, respetando los tiempos de fermentación y utilizando ingredientes seleccionados, para garantizar ese sabor casero y auténtico que tanto nos identifica.
@@ -192,3 +213,4 @@ main {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
