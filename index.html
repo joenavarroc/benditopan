@@ -109,6 +109,16 @@
   }
 }
 
+  #carouselExampleCaptions {
+    max-height: 700px; /* o el tamaño que desees */
+    overflow: hidden;
+  }
+
+  #carouselExampleCaptions .carousel-item img {
+    height: 700px; /* o el mismo alto que arriba */
+    object-fit: cover; /* recorta la imagen si es necesario */
+  }
+
   </style>
 </head>
 <body>
@@ -139,7 +149,7 @@
     </nav>
 
     <!-- Carrusel -->
-    <div id="carruselPanificadora" class="carousel slide" data-bs-ride="carousel">
+    <div id="carruselPanificadora" class="carousel slide carousel-fade">
         <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="https://cdn.pixabay.com/photo/2024/09/27/11/59/ai-generated-9078725_1280.jpg" class="d-block w-100" alt="Pan artesanal">
@@ -152,11 +162,11 @@
             <img src="https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg" class="d-block w-100" alt="Panadería">
             <div class="carousel-caption d-none d-md-block">
                 <h3>Crocante</h3>
-                <p>...Sabor, Frescura calidad.</p>
+                <p>...Sabor, Frescura, Calidad.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://cdn.pixabay.com/photo/2023/07/15/10/52/bread-8128550_1280.jpg" class="d-block w-100" alt="Pastelería">
+            <img src="https://cdn.pixabay.com/photo/2017/10/18/16/44/bread-2864703_1280.jpg" class="d-block w-100" alt="Pastelería">
             <div class="carousel-caption d-none d-md-block">
                 <h3>Variedad</h3>
                 <p>Sabores que acompañan cada comida.</p>
@@ -235,6 +245,66 @@
     </div>
     </div>
 
+    <div class="container my-5">
+      <div class="row align-items-center">
+        <!-- Columna de imagen -->
+        <div class="col-md-6 text-center">
+          <img src="https://cdn.pixabay.com/photo/2017/09/01/19/05/breadbasket-2705179_1280.png" class="img-fluid w-75" alt="Pan en canasta">
+        </div>
+
+        <!-- Columna de texto -->
+        <div class="col-md-6">
+          <p class="fw-bolder fs-4">Queremos estar siempre en tu mesa</p>
+          <p class="fw-normal fs-5">Compartir y alimentarte cada día, <strong>Desayuno, Almuerzo, Merienda, Cena</strong>... y por qué no, todos tus antojos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carrusel 2-->
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.pixabay.com/photo/2019/04/11/16/26/bread-4120133_640.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>...Danos hoy el <strong>Bendito Pan</strong> de cada dia!</h3>          
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2022/02/18/18/53/breakfast-7021320_1280.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Desayuna con Bendito Pan</h2>          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2021/11/06/04/02/choripan-6772367_1280.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Almuerza con Bendito Pan</h2>          
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Cena con Bendito Pan</h2>          
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
     <!-- Icono flotante de WhatsApp -->
     <a href="https://wa.me/5492804518148" target="_blank" id="whatsapp-icon">
@@ -276,3 +346,4 @@
 </script>
 </body>
 </html>
+
